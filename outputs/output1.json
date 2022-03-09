@@ -1,0 +1,69 @@
+{
+  "code": "OK",
+  "status": true,
+  "metadata": {
+    "block_number": 14236080,
+    "time_stamp": 1645267640,
+    "tx_hash": "0x9d3cd047d2a76db289ad6c41360cf7d6c6ee8948510f6e93c086d3c5a6fe038e",
+    "sender": {
+      "address": "0x42674586009328dcc4162a1192fedd1116ca6d54",
+      "name": "majikku.eth"
+    },
+    "receiver": {
+      "address": "0xe6949137b24ad50cce2cf6b124b3b874449a41fa",
+      "name": "X2Y2Drop"
+    },
+    "eth_value": 0,
+    "gas_used": 94476,
+    "gas_price": 40,
+    "tx_cost": 0.00377904
+  },
+  "transfers": [
+    {
+      "from_address": {
+        "address": "0xe6949137b24ad50cce2cf6b124b3b874449a41fa",
+        "name": "X2Y2Drop"
+      },
+      "to_address": {
+        "address": "0x42674586009328dcc4162a1192fedd1116ca6d54",
+        "name": "majikku.eth"
+      },
+      "token": {
+        "token_address": "0x1e4ede388cbc9f4b5c79681b7f94d36a11abebc9",
+        "token_symbol": "X2Y2Token",
+        "token_standard": "ERC20",
+        "value": "227.8333"
+      }
+    }
+  ],
+  "balances": [
+    {
+      "holder": {
+        "address": "0xe6949137b24ad50cce2cf6b124b3b874449a41fa",
+        "name": "X2Y2Drop"
+      },
+      "tokens": [
+        {
+          "token_address": "0x1e4ede388cbc9f4b5c79681b7f94d36a11abebc9",
+          "token_symbol": "X2Y2Token",
+          "token_standard": "ERC20",
+          "balance": "-227.8333"
+        }
+      ]
+    },
+    {
+      "holder": {
+        "address": "0x42674586009328dcc4162a1192fedd1116ca6d54",
+        "name": "majikku.eth"
+      },
+      "tokens": [
+        {
+          "token_address": "0x1e4ede388cbc9f4b5c79681b7f94d36a11abebc9",
+          "token_symbol": "X2Y2Token",
+          "token_standard": "ERC20",
+          "balance": "227.8333"
+        }
+      ]
+    }
+  ]
+}
