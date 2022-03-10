@@ -13,5 +13,5 @@ ADD app /app/app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
-# Install ethtx dependency from smolninja github
-RUN pip install git+https://github.com/smolninja/ethtx@66a22e4f98b41799c705744052aa455e1d5499ad
+# Install ethtx dependency from smolcastle github
+RUN pip install git+https://github.com/smolcastle/ethtx@66a22e4f98b41799c705744052aa455e1d5499ad
