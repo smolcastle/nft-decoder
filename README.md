@@ -1,6 +1,6 @@
 ## NFT Decoder
 -------------
-This hosts a flask server through docker container and exposes port 3000.
+This hosts a flask server through docker container and exposes port 80.
 
 ### Requirements
 1. GETH archive node, currently using [Quicknode](https://www.quicknode.com/)
@@ -30,11 +30,11 @@ This hosts a flask server through docker container and exposes port 3000.
 
 ### For production
 ```sh
-# Just run deploy.sh and it will build a docker image. The APIS are exposed at port 3000. Inside docker, the flask server is exposed at port 80
+# Just run deploy.sh and it will build a docker image. The APIS are exposed at port 80. Inside docker, the flask server is also exposed at port 80
 > scripts/deploy.sh
 
 # Test GET request. Response should be a json as in outputs folder
-> curl http://127.0.0.1:3000/decode/0x9d3cd047d2a76db289ad6c41360cf7d6c6ee8948510f6e93c086d3c5a6fe038e
+> curl http://127.0.0.1/decode/0x9d3cd047d2a76db289ad6c41360cf7d6c6ee8948510f6e93c086d3c5a6fe038e
 ```
 
 -------------
