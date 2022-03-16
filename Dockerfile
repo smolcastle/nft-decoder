@@ -14,4 +14,4 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 # Install ethtx dependency from smolcastle github
-RUN pip install git+https://github.com/smolcastle/ethtx@66a22e4f98b41799c705744052aa455e1d5499ad
+RUN pip install git+https://github.com/smolcastle/ethtx@bf5d55efe428ab068eeb6b5f1842ff5ea6656d17
