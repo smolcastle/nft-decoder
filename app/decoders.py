@@ -52,7 +52,7 @@ class Decoder:
         }
 
     def _to_json(self, decodedTransaction: DecodedTransaction):
-        if decodedTransaction["code"] == "INTERNAL_SERVER_ERROR":
+        if "code" in decodedTransaction and decodedTransaction["code"] == "INTERNAL_SERVER_ERROR":
             return decodedTransaction
 
         if not decodedTransaction.status:
