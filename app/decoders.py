@@ -1,4 +1,5 @@
 import os
+import traceback
 import time
 
 from dotenv import load_dotenv
@@ -33,9 +34,16 @@ class Decoder:
         self.ethtx = EthTx.initialize(ethtx_config)
 
     def _decode(self, tx_hash: str) -> DecodedTransaction:
-        transaction: DecodedTransaction = self.ethtx.decoders.decode_transaction(tx_hash)
-
-        return transaction
+        try:
+            transaction: DecodedTransaction = self.ethtx.decoders.decode_transaction(tx_hash)
+            return transaction
+        except Exception:
+            return {
+                "code": "INTERNAL_SERVER_ERROR",
+                "status": False,
+                "error": "Internal server error",
+                "msg": traceback.format_exc()
+            }
 
     def _parse_address(self, addressInfo):
         return {
@@ -44,6 +52,9 @@ class Decoder:
         }
 
     def _to_json(self, decodedTransaction: DecodedTransaction):
+        if decodedTransaction["code"] == "INTERNAL_SERVER_ERROR":
+            return decodedTransaction
+
         if not decodedTransaction.status:
             return {
                 "code": "TRANSACTION_NOT_FOUND",

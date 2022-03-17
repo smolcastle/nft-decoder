@@ -15,7 +15,7 @@ This hosts a flask server through docker container and exposes port 80.
 > pip install -r requirements.txt
 
 # Install custom ethtx dependency
-> pip install git+https://github.com/smolninja/ethtx@66a22e4f98b41799c705744052aa455e1d5499ad
+> pip install git+https://github.com/smolninja/ethtx@master
 
 # copy .env.example to .env and add node URIs
 > cp .env.example .env
