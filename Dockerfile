@@ -13,5 +13,18 @@ ADD app /app/app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
+
+# Authorize SSH Host
+RUN mkdir -p /root/.ssh && \
+    chown 0700 /root/.ssh && \
+    ssh-keyscan github.com > /root/.ssh/known_hosts
+
+# Add the keys and set permissions
+ADD id_ed25519 /root/.ssh/
+RUN chmod 600 /root/.ssh/id_ed25519
+
 # Install ethtx dependency from smolcastle github
-RUN pip install git+https://github.com/smolcastle/ethtx@master
+RUN pip install git+ssh://git@github.com/smolcastle/ethtx.git#egg=EthTx
+
+# Remove SSH keys
+RUN rm -rf /root/.ssh/
