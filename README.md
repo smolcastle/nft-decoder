@@ -3,11 +3,11 @@
 This hosts a flask server through docker container and exposes port 80.
 
 ### Requirements
-1. GETH archive node, currently using [Quicknode](https://www.quicknode.com/)
+1. GETH archive node. We use our own achive node via erigon.
 2. [Etherscan API key](https://etherscan.io/myapikey)
 3. Docker
 4. Python >= 3.8
-5. Access to [smolninja/ethtx repo](https://github.com/smolninja/ethtx)
+5. Access to [smolcastle/ethtx](https://github.com/smolcastle/ethtx) repo.
 
 ### For development
 ```sh
@@ -44,4 +44,4 @@ This hosts a flask server through docker container and exposes port 80.
     * `decoders.py` defines the Decoder class
 2. scripts folder contains deployment shell scripts
 3. Dockerfile uses a `uwsgi-nginx-flask base image` which implements `uwsgi`, `nginx` and `flask`
-4. `uwsgi.ini `contains uwsgi configurations
+4. `uwsgi.ini` contains uwsgi configurations

@@ -1,7 +1,7 @@
 # Documentation: https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/
 FROM tiangolo/uwsgi-nginx-flask:python3.8
 
-ENV GETH_ARCHIVE_NODE https://bitter-patient-morning.quiknode.pro/06a726a52ec3fa7434feb1f8eecc52de4d870b3e/
+ENV GETH_ARCHIVE_NODE http://eth.smolcastle.com:8545/
 ENV ETHERSCAN_KEY R48UWXJJ48F5VMKI6RXPMAMPMZU9UN9KJ3
 ENV UWSGI_INI /app/uwsgi.ini
 
